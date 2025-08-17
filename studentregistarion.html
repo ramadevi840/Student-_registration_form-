@@ -1,0 +1,134 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+
+        <title> Student Registration Form </title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color:lightblue;
+        margin: 0;
+        padding: 20px;
+    }
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+    form {
+        max-width: 600px;
+        margin: auto;
+        background-color:lavender;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    label {
+        display: block;
+        margin-bottom: 8px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    input[type="tel"],
+    select,
+    textarea {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+    }
+    input[type="checkbox"] {
+        margin-right: 10px;
+    }
+    input[type="submit"] {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+    input[type="submit"]:hover {
+        background-color: #218838;
+    }
+    textarea {
+        resize: vertical;
+    }
+    p {
+        text-align: center;
+        color: #666;
+    }
+    input[type="text"][value="First name"],
+    input[type="text"][value="Last name"],
+    input[type="text"][placeholder="Student"],
+    input[type="text"][placeholder="House No."],
+    input[type="text"][placeholder="Street Name"],
+    input[type="text"][placeholder="Area"],
+    input[type="text"][placeholder="City"],
+    input[type="text"][placeholder="State/Province"],
+    input[type="text"][placeholder="Country"] {
+        color: #999;
+    }
+</style>
+    </head>
+<body>
+    <h1>Student Registration Form</h1>
+    <p>Fill out the form to apply for the traing courese you can consider your application is accepted after you recieve a conformation mail</p>
+    <form action="submit_registration.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="First name" required><br><br>
+        <label for="surname">Surname:</label>
+        <input type="text" id="surname" name="surname" value="Last name" required><br><br>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required><br><br>
+        <label for="student_id">Student ID:</label>
+        <input type="text" id="student_id" name="student_id" placeholder="Student" required><br><br>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required><br><br>
+        <label for="address">Address:</label>
+         <input type="text" id="address" name="address" placeholder="House No." required><br><br>
+         <input type="text" id="address" name="address" placeholder="Street Name" required><br><br>
+         <input type="text" id="address" name="address" placeholder="Area" required><br><br>
+         <input type="text" id="address" name="address" placeholder="City" required><br><br>
+         <input type="text" id="address" name="address" placeholder="State/Province" required><br><br>
+         <input type="text" id="address" name="address" placeholder="Country" required><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="course">Course:</label>
+        <select id="course" name="course">
+            <option value="computer_science">Computer Science</option>
+            <option value="mathematics">Mathematics</option>
+            <option value="physics">Physics</option>
+            <option value="chemistry">Chemistry</option>
+        </select><br><br>
+        <label for="year">Year of Study:</label>
+        <select id="year" name="year">
+            <option value="first_year">First Year</option>
+            <option value="second_year">Second Year</option>
+            <option value="third_year">Third Year</option>
+            <option value="fourth_year">Fourth Year</option>
+        </select><br><br>
+        <label for="language">Preferred Language:</label>
+        <select id="language" name="language">
+            <option value="english">English</option>
+            <option value="spanish">Spanish</option>
+            <option value="french">French</option>
+            <option value="german">German</option>
+            <option value="chinese">Chinese</option>
+        </select><br><br>
+        <lable for="starting date" >Starting Date:</lable>
+        <input type="date" id="start_date" name="start_date" required><br><br>
+        <label for="comments">Comments:</label><br>
+        <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Any additional information or requests"></textarea><br><br>
+        <label for="terms">I agree to the terms and conditions:</label>
+        <input type="checkbox" id="terms" name="terms" required><br><br>
+        <label for="captcha">Captcha: 3 + 5 = ?</label>
+        <input type="text" id="captcha" name="captcha" required><br><br>
+    </form>
+        <input type="submit" value="Register">
+</body>
+</html>
